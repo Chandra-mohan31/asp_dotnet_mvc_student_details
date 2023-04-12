@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Student Page Index";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Student Id</th>
+        </tr>
+    </thead>
+    
+    @foreach (var book in (List<StudentModel>)ViewData["list_of_students"])
+    {
+        <tr>
+        <td>@book.studentId</td>
+        <td>@book.studentName</td>
+        </tr>
+    }
+</table>
+
+
